@@ -1,18 +1,17 @@
-import React from 'react';
-import{Menu} from 'antd';
-import{Link}from 'react-router-dom';
+import React from "react";
+import { Menu } from "antd";
+import { Link } from "react-router-dom";
 import { ReactComponent as Logo } from "../assets/img/logo.svg";
 
+import "./MenuTop.scss";
 
-import './MenuTop.scss';
-
-export default function MenuTop(){
-    return (
-        <div className ="menu-top">
-            <div className = "menu-top__logo">
-                <Logo/>
-            </div>
-            <Menu
+export default function MenuTop() {
+  return (
+    <div className="menu-top">
+      <div className="menu-top__logo">
+        <Logo />
+      </div>
+      <Menu
         theme="dark"
         mode="horizontal"
         defaultSelectedKeys={["1"]}
