@@ -1,13 +1,15 @@
 import React from 'react';
 import{Carousel,Button} from 'antd';
 import {Link} from 'react-router-dom';
+import Loading from '../Loading'
+
 import './SliderMovies.scss';
 
  export default function SliderMovies(props){
-     const {movies}= props
+     const {movies}= props;
 
      if(movies.loading || !movies.result){
-         return "Loading..."
+         return <Loading/>;
      }
 
      const {results} = movies.result;
@@ -20,7 +22,6 @@ import './SliderMovies.scss';
     );
  }
 
- 
     function Movie(props) {
         const {
           movie: { id, backdrop_path, title, overview }

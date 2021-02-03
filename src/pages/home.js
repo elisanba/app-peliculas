@@ -13,7 +13,5 @@ return(
     <>
     <SliderMovies movies={newMovies}/>
     </>
-
-
 );
 }
