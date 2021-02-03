@@ -4,6 +4,7 @@ import useFetch from '../hooks/useFetch';
 import {URL_API,API} from '../utils/constants';
 import SliderMovies from '../components/SliderMovies';
 import MovieList from '../components/MovieList';
+import Footer from '../components/Footer';
 
 
 export default function Home(){
@@ -31,6 +32,10 @@ return(
         <MovieList  title ="Top Mejores Películas Valoradas"movies ={ top_ratedMovies}/>
         </Col>
     </Row>
+    <Footer/>
+
     </>
+
+
 );
 }
