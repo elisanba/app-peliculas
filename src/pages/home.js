@@ -15,6 +15,9 @@ export default function Home(){
     `${URL_API}/movie/popular?api_key=${API}&language=es-Es&page=1`
 );
 
+const  top_ratedMovies  =useFetch(
+    `${URL_API}/movie/top_rated?api_key=${API}&language=es-Es&page=1`
+);
 
   
 return(
@@ -25,7 +28,7 @@ return(
             <MovieList  title ="Películas Populares"movies ={popularMovies}/>
         </Col>
         <Col span={12}>
-            ...
+        <MovieList  title ="Top Mejores Películas Valoradas"movies ={ top_ratedMovies}/>
         </Col>
     </Row>
     </>
