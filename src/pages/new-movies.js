@@ -3,6 +3,7 @@ import { Row, Col } from "antd";
 import { URL_API, API } from "../utils/constants";
 import Footer from "../components/Footer";
 import Loading from "../components/Loading";
+import MovieCatalog from "../components/MovieCatalog";
 
 
 export default function NewMovies(){
@@ -27,18 +28,11 @@ export default function NewMovies(){
             </h1>
           </Col>
           {movieList.results ? (
-            <Row>
-              <Col span="24">
-                <MovieCatalog movies={movieList} />
-              </Col>
-              <Col span="24">
-                <Pagination
-                  currentPage={movieList.page}
-                  totalItems={movieList.total_results}
-                  onChangePage={onChangePage}
-                />
-              </Col>
-            </Row>
+           <Col span={24}>
+           <Row>                                     
+             <MovieCatalog movies={movieList} />
+           </Row>
+         </Col>
           ) : (
             <Col span="24">
               <Loading />
