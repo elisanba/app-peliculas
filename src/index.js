@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'antd/dist/antd.css';
+import "rc-pagination/assets/index.css";
+
 import './index.css';
 
 ReactDOM.render(
