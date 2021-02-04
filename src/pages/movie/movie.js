@@ -1,11 +1,12 @@
 import React from 'react';
 
-import { Row, Col, Button } from "antd";
+import { Row, Col } from "antd";
 import { useParams } from "react-router-dom";
 import moment from "moment";
 import useFetch from "../../hooks/useFetch";
 import { URL_API, API } from "../../utils/constants";
 import Loading from "../../components/Loading";
+
 
 import "./movie.scss";
 
@@ -45,8 +46,8 @@ export default function Movie() {
             </div>
           );
         }
-     
       }
+
       function PosterMovie(props) {
         const { image } = props;
         const posterPath = `https://image.tmdb.org/t/p/original${image}`;
@@ -54,11 +55,12 @@ export default function Movie() {
         return <div style={{ backgroundImage: `url('${posterPath}')` }} />;
       }
 
+
       function MovieInfo(props) {
         const {
           movieInfo: { id, title, release_date, overview, genres }
         } = props;
-       
+        
 
         return (
           <>
@@ -66,13 +68,11 @@ export default function Movie() {
             <h1>
               {title}
               <span>{moment(release_date, "YYYY-MM-DD").format("YYYY")}</span>
-            </h1>
-            <button>Ver trailer</button>
+            </h1> 
           </div>
           <div className="movie__info-content">
             <h3>General</h3>
             <p>{overview}</p>
-
             <h3>Generos</h3>
             <ul>
               {genres.map(gender =>(
