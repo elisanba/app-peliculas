@@ -7,9 +7,8 @@ import MenuTop from "./components/MenuTop";
 import Home from "./pages/home";
 import NewMoviews from "./pages/new-movies";
 import Popular from "./pages/popular";
-import Search from "./pages/search";
 import Movie from "./pages/movie";
-import Error404 from "./pages/error404";
+
 
 export default function App() {
   const { Header, Content } = Layout;
@@ -31,15 +30,9 @@ export default function App() {
             </Route>
             <Route path="/popular" exact={true}>
               <Popular />
-            </Route>
-            <Route path="/search" exact={true}>
-              <Search />
-            </Route>
+            </Route>  
             <Route path="/movie/:id" exact={true}>
               <Movie />
-            </Route>
-            <Route path="*">
-              <Error404 />
             </Route>
           </Switch>
         </Content>

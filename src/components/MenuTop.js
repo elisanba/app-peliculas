@@ -1,7 +1,7 @@
 import React from "react";
 import { Menu } from "antd";
 import { Link } from "react-router-dom";
-import { ReactComponent as Logo } from "../assets/img/logo.svg";
+
 
 import "./MenuTop.scss";
 
@@ -9,7 +9,7 @@ export default function MenuTop() {
   return (
     <div className="menu-top">
       <div className="menu-top__logo">
-        <Logo />
+     
       </div>
       <Menu
         theme="dark"
@@ -26,8 +26,7 @@ export default function MenuTop() {
         <Menu.Item key="3">
           <Link to="/popular">Populares</Link>
         </Menu.Item>
-        <Menu.Item key="4">
-          <Link to="/search">Buscador</Link>
+        <Menu.Item key="4"> 
         </Menu.Item>
       </Menu>
     </div>
