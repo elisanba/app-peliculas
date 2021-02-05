@@ -1,4 +1,4 @@
-# Web de peliculas creada con react 
+·# Web de peliculas creada con react que interactua con la API de themoviedb
  Esta pagina a sido creado con react,tambien utilicé sass,react-router para navegar entre paginas y la libreria de css ant-desing
 
 
